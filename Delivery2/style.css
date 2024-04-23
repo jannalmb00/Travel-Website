@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+.belleza-regular {
+  font-family: "Belleza", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{background-color: black;}
+nav{
+  text-align: center;
+  font-size: 1.3rem;
+  position: fixed;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  border-bottom: #D9DFD7 solid;
+  z-index: 99;
+}
+nav a:hover{color: #6CA659;}
+h1,h2{
+  color: #6CA659;
+  font-size: 3.6rem;
+  padding-top: 20%;
+  letter-spacing: 5px;}
+h2{
+  padding: 3%;
+text-align: center;}
+h3{
+  font-size:1.4rem;
+  letter-spacing:2px;
+}
+nav li{display: inline; margin:2%}
+nav a{text-decoration: none; color: white;}
+
+#header-home{
+  background-image: url('img/header-home.jpeg');
+  width: 100%;
+  height: 88vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+#header-aboutUs{
+  background-image: url('img/header-aboutUs.jpeg');
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+#div-aboutUs{
+  display: flex;
+}
+#div-aboutUs p{
+  padding: 2%;
+  
+}
+#div-aboutUs img{
+  padding: 2%;
+}
+.div-popularTours-container{
+  position:absolute;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider{
+  position: absolute;
+  inset: 0 8% 5% 8%;
+  background: #ccc;
+  border-radius: 20px;
+}
+.slider .slides{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: 320px;
+  background:var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+  background-size: cover; 
+}
+.slider .slides:nth-child(3){
+  left: calc(50% + 240px);
+  background-size: cover;
+}
+.slider .slides:nth-child(4){
+  left: calc(50% + 500px);
+  background-size: cover;
+}
+.buttons{
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  gap: 20px;
+}
+.buttons span{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color:rgb(131, 132, 94);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+} 
+.buttons span::before{
+  content: '/';
+  color: white;
+  position: absolute;
+  width: 15px;
+  height: 50px;
+}
+.buttons span:hover{
+  opacity: 0.9;
+}
+.buttons span:active{
+  opacity: 0.6;
+}
+iframe{
+  position:absolute;
+  margin-top: 50%;
+  margin-left: 20%;
+}
+footer{
+  position:absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer div{
+  flex: 1;
+}
+footer svg{color: white;}
