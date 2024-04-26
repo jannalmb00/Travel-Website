@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="header-home">
+  <div >
     <nav>
       <ul>
         <li><a href="HOME.html">HOME</a></li>
@@ -20,12 +20,76 @@
          <li><a href="BOOK.html">BOOK</a></li>
       </ul>
     </nav>
-    <header class="belleza-regular">
-      <h1>DISCOVER YOUR <br>NEXT ADVENTURE</h1>
-      <h3>From Here to AnyWhere</h3>
-    </header>
+    <div id="div-world-map">
+      <img src="img/worldmap.png" alt="world-map"/>
 
+      <div class="pin asia">
+        <span>Asia</span>
+      </div>
+      <div  class="pin africa">
+        <span>Africa</span>
+      </div>
+      <div  class="pin north-america">
+        <span>North America</span>
+      </div>
+      <div  class="pin south-america">
+        <span>South America</span>
+      </div>
+      <div  class="pin europe">
+        <span>Europe</span>
+      </div>
+      <div  class="pin australia">
+        <span>Australia</span>
+      </div>
+    </div>
+    <div id="filter"> 
+     
+      <div>
+        <label>Price Range</label>
+        <input type="range"  min="500" max="1500" value="500">
+        <input type="range"  min="1500" max="3000" value="1500">
+      </div>
+      <div>
+        <select id="continent" name="continent">
+          <option value="" disabled selected>Choose a continent:</option>
+          <optgroup label="Continents">
+            <option value="asia">Asia</option>
+            <option value="australia">Australia</option>
+            <option value="africa">Africa</option>
+            <option value="europe">Europe</option>
+            <option value="north-america">North America</option>
+            <option value="south-america">South America</option>
+          </optgroup>
+        </select>
+      </div>
+        <div>
+          <label for="days-vacation">Number of Days</label>
+          <input type="range"  min="1" max="10" value="1">
+        </div>
+    </div>
+    <button type="button">Search!</button>
   </div>
+
+  <main id="tour-main">
+    <div>
+      <img src="img/img1.png" >
+    </div>
+    <div>
+      <img src="img/img2.jpeg" >
+    </div>
+    <div>
+      <img src="img/img3.jpeg" >
+    </div>
+    <div>
+      <img src="img/img4.jpeg" >
+    </div>
+    <div>
+      <img src="img/img1.png" >
+    </div>
+    <div>
+      <img src="img/img2.jpeg" >
+    </div>
+  </main>
   
 </body>
 </html>
