@@ -14,11 +14,12 @@ nav{
   text-align: center;
   font-size: 1.3rem;
   position: fixed;
-  width: 100%;
+  width: 80%;
   padding-top: 2%;
   padding-bottom: 1%;
   border-bottom: #D9DFD7 solid;
   z-index: 99;
+  margin: 0 10%;
 }
 nav a:hover{color: #6CA659;}
 h1,h2{
@@ -224,7 +225,19 @@ iframe{
 }
 #tour-main{
   display: flex;
+  flex-wrap: wrap;
+  
 }
+#tour-main > .tour{
+  margin: 2%;
+  height: 400;
+  width: 420;
+}
+.tour-body {
+  height: 200px; /* Adjust this to your desired fixed height */
+  overflow: auto; /* Add scrollbar if content exceeds height */
+}
+
 footer{
   display: flex;
   justify-content: space-between;
