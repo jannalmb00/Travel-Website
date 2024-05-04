@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Website</title>
+<style>
+  /* Define styles for the button and additional details */
+  .details {
+    display: none; /* Hide details by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- Your content -->
+<div>
+  <h2>Destination</h2>
+  <p>Some brief information about the destination.</p>
+  <!-- Button to show more details -->
+  <button onclick="toggleDetails()">Show More Details</button>
+  <!-- Additional details initially hidden -->
+  <div id="moreDetails" class="details">
+    <span class="close" onclick="toggleDetails()">Close &#10006;</span>
+    <h3>More Details</h3>
+    <p>Additional information about the destination.</p>
+  </div>
+</div>
+
+<script>
+  function toggleDetails() {
+    var details = document.getElementById("moreDetails");
+    if (details.style.display === "none") {
+      details.style.display = "block"; // Show details
+    } else {
+      details.style.display = "none"; // Hide details
+    }
+  }
+</script>
+
+</body>
+</html>
