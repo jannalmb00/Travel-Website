@@ -51,144 +51,32 @@
         <span>Australia</span>
       </div>
     </div>
-    <div id="filter " > 
-     
-      <div class="sliderRange">
-        <p class="title">Price Range</p>
-        <div class="range-slider" id="range-values">
-          <span class="rangeValue" id="range-values"></span>
-          <input value="100" min="100" max="5000" step="50" type="range" class="range-input"/>
-          <input value="5000" min="100" max="5000" step="50" type="range" class="range-input"/>
-        </div>
-      </div>
-      <div>
-        <select id="continent" name="continent">
-          <option value="" disabled selected>Choose a continent:</option>
-          <optgroup label="Continents">
-            <option value="asia">Asia</option>
-            <option value="australia">Australia</option>
-            <option value="africa">Africa</option>
-            <option value="europe">Europe</option>
-            <option value="north-america">North America</option>
-            <option value="south-america">South America</option>
-          </optgroup>
-        </select>
-      </div>
-        <div>
-          <label for="days-vacation">Number of Days</label>
-          <input type="range"  min="1" max="10" value="1">
-        </div>
-    </div>
-    <button type="button">Search!</button>
   </div>
 
-  <main id="tour-main">
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 1</h3>
-        <p> and review job listings and companies based on their </p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails(moreDetails)">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails" class="details">
-        <span class="close" onclick="toggleDetails(moreDetails)">Close &#10006;</span>
-        <h3>More Details 1</h3>
-        <p>Additional information about the destination. a voluptatem quo veritatis quos. Ex voluptatem magnam id reiciendis
-          fugit et ex</p>
-      </div>
+  <div id="filter ">  
+    <div class="sliderRange">
+      <label for="priceRange">Price Range:</label>
+      <input type="range" id="priceRange" min="100" max="5000" step="50" value="100">
     </div>
+    <div>
+      <select id="continent">
+        <option value="">Choose a continent:</option>
+        <option value="asia">Asia</option>
+        <option value="australia">Australia</option>
+        <option value="africa">Africa</option>
+        <option value="europe">Europe</option>
+        <option value="north-america">North America</option>
+        <option value="south-america">South America</option>
+      </select>
+    </div>
+      <div>
+        <label for="daysVacation">Number of Days:</label>
+        <input type="range" id="daysVacation" min="1" max="10" value="1">
+      </div>
+  </div>
+  <button type="button">Search!</button>
 
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 2</h3>
-        <p> and review job listings and companies based on their</p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails(moreDetails2)">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails2" class="details">
-        <span class="close" onclick="toggleDetails(moreDetails2)">Close &#10006;</span>
-        <h3>More Details 2</h3>
-        <p>Additional information about the destination.</p>
-      </div>
-    </div>
-
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 3</h3>
-        <p> and review job listings and companies based on their</p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails(moreDetails3)">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails3" class="details">
-        <span class="close" onclick="toggleDetails(moreDetails3)">Close &#10006;</span>
-        <h3>More Details 3</h3>
-        <p>Additional information about the destination.</p>
-      </div>
-    </div>
-
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 4</h3>
-        <p> and review job listings and companies based on their</p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails()">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails" class="details">
-        <span class="close" onclick="toggleDetails()">Close &#10006;</span>
-        <h3>More Details 4</h3>
-        <p>Additional information about the destination.</p>
-      </div>
-    </div>
-
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 5</h3>
-        <p> and review job listings and companies based on their</p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails()">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails" class="details">
-        <span class="close" onclick="toggleDetails()">Close &#10006;</span>
-        <h3>More Details 5</h3>
-        <p>Additional information about the destination.</p>
-      </div>
-    </div>
-
-    <div class="tour div-style">
-      <img src="img/img2.jpeg" height="350" width="380">
-      <div class="tour-body">
-        <h3>Tour 6</h3>
-        <p> and review job listings and companies based on their</p>
-        <div class="tour-footer">
-          <button onclick="toggleDetails()">Show More Details</button>
-          <input type="radio">
-        </div>
-      </div>
-      <div id="moreDetails" class="details">
-        <span class="close" onclick="toggleDetails()">Close &#10006;</span>
-        <h3>More Details 6</h3>
-        <p>Additional information about the destination.</p>
-      </div>
-    </div>
-   
-    
-    
-  </main>
+  <main id="tour-main"></main>
   
   <footer>
     <div class="footer-left">
