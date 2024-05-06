@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "jannalmb",
+      "name": "Janna Lomibao",
+      "password": "jannalmbpassword",
+      "code": "w4itADTO",
+      "email": "janna@lomibao",
+      "number": "123456"
+    },
+    {
+      "username": "daneyley",
+      "name": "Danie Guzman",
+      "password": "daneyleypassword",
+      "code": "he3cAY8W",
+      "email": "danie@guzman",
+      "number": "345678"
+    },
+    {
+      "username": "alwayskayce",
+      "name": "Kayce Mapile",
+      "password": "alwayskaycepassword",
+      "code": "pt539vQp",
+      "email": "kayce@mapile",
+      "number": "098765"
+    }
+  ]
+}
