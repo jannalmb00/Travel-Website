@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const savedTours = JSON.parse(localStorage.getItem('savedTours')) || [];
-  let users;
+  let users =  JSON.parse(localStorage.getItem('users')) || [];
   let tours;
 
   // Fetch users and tours, then display saved tours
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
       closeButtonLoginBook.click();
       checkForm.style.display = 'flex';
-      console.log(user.name);
+     // console.log(user.name);
       displayCheckoutTour(user.name);
     } else {
       alert("Failed to login. Please check your username and password.");
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Checking saved tour ID:", savedTourId);
             let foundTour = null;
             for (let i = 0; i < tours.length; i++) {
-              console.log(tours[i].id )
-              console.log(savedTourId)
-              console.log(tours[i].id == savedTourId)
+              //console.log(tours[i].id )
+              //console.log(savedTourId)
+              //console.log(tours[i].id == savedTourId)
               if (tours[i].id == savedTourId) {
                 foundTour = tours[i];
                 break;
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
       user.code.push(generatedCode);
     }
 
-    saveUsersToJSON();
+    //saveUsersToJSON();
     console.log(users);
 
   }
@@ -311,10 +311,10 @@ document.addEventListener("DOMContentLoaded", function() {
         "email": newEmail,
         "number": newNumber
       };
-      users.push(newUser);
+      saveUserToLocalStorage(newUser);
+      alert('Registration successful!');
 
-      console.log("new");
-      console.log(users);
+
       closeRegisterBtn.click();
       checkForm.style.display = 'flex';
 
@@ -322,6 +322,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   })
+  function saveUserToLocalStorage(newUser) {
+    // Retrieve existing users from local storage
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    console.log(existingUsers);
+    // Add the new user to the existing users
+    existingUsers.push(newUser);
+    // Save the updated users to local storage
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+    console.log(users)
+
+  }
 //--------------------Fetch-----------------------
   //--------fetch users------
   function fetchUsers() {
@@ -329,8 +340,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             users = data.users;
-            console.log("Users loaded:", users);
-            localStorage.setItem('users', JSON.stringify(users));
+            //console.log("Users loaded:", users);
+            //localStorage.setItem('users', JSON.stringify(users));
         })
         .catch(error => console.error('Error loading user data:', error));
 }

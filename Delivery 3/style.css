@@ -34,7 +34,7 @@ h3{
   padding-bottom: 1%;
   border-bottom: #D9DFD7 solid;
   z-index: 99;
-  margin: 0 10%;
+  margin: 0 10% 0 10%;
 }
 footer svg:hover,
 .footer-left a:hover,
@@ -659,7 +659,8 @@ input#login-submit:hover{
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:bottom;
+  background-position: center;
+  text-align: center;
 }
 #blog-title{
   display: grid;
@@ -714,7 +715,8 @@ input#login-submit:hover{
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:bottom;
+  background-position: center;
+  text-align: center;
 
 }
 #book-btn{
