@@ -279,12 +279,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const generatedCode = generateBookingCode();
     bookingCode.textContent = generatedCode;
 
-    const user = users.find(user => user.name === client);
+    const userIndex = users.findIndex(user => user.name === client);
 
-    if (user) {
-      user.code.push(generatedCode);
+    if (userIndex !== -1) {
+        // Push the generated code to the user's codes array
+        users[userIndex].code.push(generatedCode);
+
+        // Save the updated users data to local storage
+        localStorage.setItem('users', JSON.stringify(users));
+    } else {
+        console.error('User not found:', client);
     }
-
     //saveUsersToJSON();
     console.log(users);
 
