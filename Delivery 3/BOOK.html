@@ -125,6 +125,8 @@ For "Internet Programming" Section 00002 --- Winter 2024
       <h3 id="greeting-checkout"></h3>
       <label for="start" class="label-style">Start date:</label>
       <input type="date" id="check-start-day" name="trip-start" min="" max="" value="" required/>
+      <label for="quantity">Number of participants:</label>
+      <input type="number" id="num-ppl" min="1" max="5" value="1" >
       <div id="tour-list-checkout" >
 
       </div>
@@ -147,6 +149,7 @@ For "Internet Programming" Section 00002 --- Winter 2024
     <h4>Thank you for booking your tour with us! Here's a summary of your booking:</h4>
     <h5>Tour name: <span id="tour-name-summary"></span></h5>
     <h5>Tour price: <span id="tour-price-summary"></span></h5>
+    <h5>Total price: <span id="total-price-summary"></span></h5>
     <h5>Tour location: <span id="tour-location-summary"></span></h5>
     <h5>Tour date: <span id="tour-date-summary"></span></h5>
     <h5>Client name: <span id="client-name-summary"></span></h5>

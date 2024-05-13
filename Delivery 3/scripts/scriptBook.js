@@ -207,9 +207,10 @@ document.addEventListener("DOMContentLoaded", function() {
           checkSubmitBtn.addEventListener('click', function(event) {
             event.preventDefault();
             // Get the selected tour ID from the checked radio button
+            const numberPpl = document.getElementById('num-ppl').value;
             const selectedTourId = document.querySelector('input[name="checkoutTour"]:checked').value;
             // Call the function to show the summary with the selected tour ID  
-            showSummary(client, selectedTourId);
+            showSummary(client, selectedTourId,numberPpl);
             
 
           });
@@ -229,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
 
   //---------------show summary after checkout---------------
-  function showSummary(client, selectedTourId) {
+  function showSummary(client, selectedTourId, numPpl) {
     // Get the selected tour details based on the selectedTourId
     console.log("show summary function called"); 
     //;
@@ -252,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the elements in the summary
     const tourNameSummary = document.getElementById('tour-name-summary');
     const tourPriceSummary = document.getElementById('tour-price-summary');
+    const totalPriceSummary = document.getElementById('total-price-summary');
     const tourLocationSummary = document.getElementById('tour-location-summary');
     const tourDateSummary = document.getElementById('tour-date-summary');
     const clientNameSummary = document.getElementById('client-name-summary');
@@ -263,9 +265,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const startDateFormatted = formatDate(startDate);
     const endDateFormatted = formatDate(endDate);
 
+    var total =  parseInt(selectedTour.price) * numPpl;
+
     // Populate the summary with the selected tour details and client information
     tourNameSummary.textContent = selectedTour.name;
     tourPriceSummary.textContent = selectedTour.price;
+    totalPriceSummary.textContent = numPpl + " pax for " + total;
     tourLocationSummary.textContent = selectedTour.location;
     tourDateSummary.textContent = startDateFormatted + ' - ' + endDateFormatted;
     clientNameSummary.textContent = client;
