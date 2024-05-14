@@ -1,13 +1,6 @@
 # Travel-Website
 **Project description**
-This project aims to create a travel website. This project will offer various amazing destinations for different types of travellers. The website will provide an accessible navigation and creative design that will appeal to the user. Some features, such as search filters and testimonies, will be implemented to make the website friendly to users. Additionally, to make the website more personalized, the website will have an authentication functionality which will allow them to submit their testimonies and make the Blog page authentic and exclusive to people who truly had an experience using this website.
-
-**Pages**
-1. Home
-2. About Us
-3. Tours
-4. Blogs
-5. Book
+This project aims to create a travel website. This project will offer various amazing destinations for different types of travellers. The website will provide an accessible navigation and creative design that will appeal to the user.
 
 **Details of each pages**
 **1.Home page**
@@ -24,3 +17,8 @@ The BLOGS page contains a navigation menu and an authentication functionality. T
 
 **5. Blog page**
 The BOOK page contains a navigation menu and a form where the user can book their next dream destination. A table is also present on the page which contains the selected tours when exploring the TOURS page. Having a table and the form on the same page can help the user visually compare the options that she had when exploring the TOUR page.
+
+**What is needed to perofrm this:**
+1. Visual Studio Code
+2. Mkae sure to install Live server as an extension in Visual Studio Code
+3. Make sure to open it with as folder to make sure that every functioanlities of the website is performing well.
